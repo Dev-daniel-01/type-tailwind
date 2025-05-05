@@ -15,7 +15,6 @@ export default function Home() {
           <h1 className="text-[white] text-5xl">
             Estudos sever side e client side
           </h1>
-          <a href="/hookPage" className="text-[white]">Meu bilas</a>
       </div>
     </>
   );
