@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Suspense } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 type IData = {
     results: {
@@ -9,6 +10,7 @@ type IData = {
         image: string;
         species: string;
         status: string;
+        id: string;
     }[]
 }
 
@@ -33,6 +35,7 @@ const ServerSide = async () => {
                         <p>{item.species}</p>
                         <p>{item.status}</p>
                         <p>{item.gender}</p>
+                        <Link href={`/personagem/${item.id}`} className="bg-black text-white">Abrir detalhes</Link>
                     </div>
                 )
             })}
